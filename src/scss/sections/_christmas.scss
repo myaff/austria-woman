@@ -1,12 +1,15 @@
 .section {
-  &--christmas {
+  .layout--desktop &--christmas {
     background: url('../img/christmas-bg.jpg') top center no-repeat;
   }
-  &--christmas &__heading {
+  .layout--desktop &--christmas &__heading {
     .tp-heading--huge {
       margin-left: -1.6rem;
       margin-bottom: -0.6rem;
     }
+  }
+  .layout--mobile &--christmas &__heading {
+    @include absolute(top 5rem left 1.5rem);
   }
   &--christmas &__text-1 {
     margin-right: -0.5rem;
@@ -20,15 +23,27 @@
     margin-left: 218px;
     position: relative;
   }
-  &--christmas &__slider {
+  .layout--desktop &--christmas &__slider {
     .owl-nav {
       padding: 1rem 0 2rem;
     }
   }
-  &--christmas &__mark {
+  .layout--mobile &--christmas &__slider {
+    .owl-nav {
+      padding: 2rem 0 1.5rem;
+      margin: 0 1.5rem;
+    }
+  }
+  .layout--desktop &--christmas &__mark {
     .mark__line {
       @include relative(top 0 left 101px);
       height: 260px;
+    }
+  }
+  .layout--mobile &--christmas &__mark {
+    .mark__line {
+      @include relative(top 0 left 70px);
+      height: 100px;
     }
   }
 }

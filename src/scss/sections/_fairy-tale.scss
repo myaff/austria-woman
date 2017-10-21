@@ -1,13 +1,16 @@
 .section {
-  &--fairy-tale {
+  .layout--desktop &--fairy-tale {
     background: url('../img/fairy-tale-bg.jpg') top center no-repeat;
     z-index: 1;
   }
-  &--fairy-tale &__text {
+  .layout--desktop &--fairy-tale &__text {
     margin: 0 -1rem -0.25rem;
   }
-  &--fairy-tale &__heading {
+  .layout--desktop &--fairy-tale &__heading {
     display: flex;
+  }
+  .layout--mobile &--fairy-tale &__heading {
+    @include absolute(top 0 left 1.5rem);
   }
   &--fairy-tale &__slider {
     
@@ -15,20 +18,15 @@
       z-index: 3;
     }
     
-    .owl-nav {
+    .layout--desktop & .owl-nav {
       width: 390px;
-      @media #{$sm} {
-        margin: 0 20%;
-        background: $color--secondary;
-      }
     }
-    
-    &-wrapper {
-      
+    .layout--mobile & .owl-nav {
+      background: transparent;
     }
   }
   
-  &--fairy-tale &__mark {
+  .layout--desktop &--fairy-tale &__mark {
     background: $color--secondary;
     margin-left: -1rem;
     .mark__line {
@@ -36,15 +34,13 @@
       top: -340px;
       left: 173px;
     }
-    @media #{$sm} {
-      &-wrapper {
-        margin-top: -2rem;
-        z-index: 4;
-      }
-      .mark__line {
-        height: 235px;
-        top: -250px;
-      }
+  }
+  .layout--mobile &--fairy-tale &__mark {
+    z-index: 4;
+    .mark__line {
+      height: 230px;
+      top: -250px;
+      left: 90px;
     }
   }
 }

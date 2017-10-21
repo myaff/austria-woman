@@ -1,12 +1,11 @@
 .section {
-  &--shopping {
+  .layout--desktop &--shopping {
     background: url('../img/shopping-bg.jpg') top center no-repeat;
-    @media #{$sm} {
-      background: url('../img/clubs/clubs-bg_m.jpg') bottom 580px center no-repeat;
-      background-size: contain;
-    }
   }
-  &--shopping &__slider-1 {
+  .layout--mobile &--shopping {
+    background: url('../img/shopping-bg-m.jpg') top center no-repeat;
+  }
+  .layout--desktop &--shopping &__slider-1 {
     padding-left: 120px;
     padding-right: 140px;
     
@@ -26,10 +25,33 @@
       background: transparent;
     }
   }
-  &--shopping &__slider-1 &__line {
+  .layout--mobile &--shopping &__slider-1 {
+    &::before {
+      content: '';
+      display: block;
+      @include size(auto, auto);
+      @include absolute(top 250px left -1.5rem right -1.5rem bottom 0);
+      z-index: 0;
+      background: $color--secondary;
+    }
+    
+    .owl-carousel {
+      z-index: 3;
+    }
+    .owl-nav {
+      background: transparent;
+    }
+  }
+  .layout--desktop &--shopping &__slider-1 &__line {
     height: 240px;
     bottom: 0;
     left: 357px;
+    z-index: 4;
+  }
+  .layout--mobile &--shopping &__slider-1 &__line {
+    height: 250px;
+    bottom: 0;
+    left: 50%;
     z-index: 4;
   }
   &--shopping &__slider-2 {
@@ -45,9 +67,17 @@
     left: 257px;
     z-index: 3;
   }
-  &--shopping &__mark {
+  .layout--desktop &--shopping &__mark {
     background: $color--secondary;
     z-index: 2;
+  }
+  .layout--mobile &--shopping &__mark {
+    .mark__line {
+      height: 260px;
+      left: 105px;
+      top: auto;
+      bottom: 0;
+    }
   }
   &--shopping &__offset {
     margin-left: -235px;

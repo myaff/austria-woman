@@ -26,7 +26,7 @@ $currentPage = end($pathArr);
 <body>
 <div class="svg-placeholder hidden"></div>
 <script>$('.svg-placeholder').html(SVG_SPRITE);</script>
-<div class="layout">
+<div class="layout layout--desktop">
 <div class="header">
 	<div class="header__content">
 	  <div class="header__left">

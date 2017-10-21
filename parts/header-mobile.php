@@ -25,7 +25,7 @@ $currentPage = end($pathArr);
 <body>
 <div class="svg-placeholder hidden"></div>
 <script>$('.svg-placeholder').html(SVG_SPRITE);</script>
-<div class="layout <?php if($mainPage){?>layout--mhome<?php } else {?>layout--landing<?php } ?>">
+<div class="layout layout--mobile">
 <div class="header">
 	<div class="header__content">
 	  <div class="header__logo logo logo--vs">

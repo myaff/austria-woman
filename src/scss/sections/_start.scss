@@ -6,19 +6,12 @@
     background: url('../img/start-bg.jpg') top center no-repeat;
     
     @media #{$sm} {
-      background: url('../img/start/start-bg-top_m.jpg') top center no-repeat;
+      background: url('../img/start-bg-m.jpg') top center no-repeat;
       background-size: cover;
     }
   }
-  &--start &__bottom {
+  .layout--desktop &--start &__bottom {
     margin-bottom: -95px;
-    
-    @media #{$sm} {
-      background: url('../img/start/start-bg-bottom_m.jpg') top center no-repeat;
-      background-size: cover;
-      padding: 0;
-      margin: 0;
-    }
   }
   &--start &__img-wrapper {
     z-index: 3;
@@ -104,18 +97,19 @@
       }
     }
   }
-  &--start &__bottom &__line {
+  .layout--desktop &--start &__bottom &__line {
     @include absolute(top 0 left 51%);
     @include size(3px, 500px);
     background: $color--primary;
-    
-    @media #{$sm} {
-      top: 420px;
-      left: 50%;
-      margin-left: -1.5px;
-      height: 215px;
-      z-index: 2;
-    }
+  }
+  .layout--mobile &--start &__bottom &__line {
+    @include relative(top 0 left 0);
+    height: 215px;
+  }
+  .layout--mobile &--start &__rect {
+    @include size(387px, 75px);
+    background: $body-bg;
+    margin-bottom: -2px;
   }
 }
 

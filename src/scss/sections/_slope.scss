@@ -1,11 +1,14 @@
 .section {
-  &--slope {
+  .layout--desktop &--slope {
     background: url('../img/slope-bg.jpg') top center no-repeat;
   }
-  &--slope &__heading {
+  .layout--mobile &--slope {
+    background: url('../img/slope-bg-m.jpg') top center no-repeat;
+  }
+  .layout--desktop &--slope &__heading {
     display: flex;
   }
-  &--slope &__img {
+  .layout--desktop &--slope &__img {
     &-wrapper {
       @include absolute(top 0 right 0);
     }
@@ -16,12 +19,32 @@
   &--slope &__text-2 {
     margin-right: -1.5rem;
   }
+  &--slope &__text {
+    margin-left: -1.5rem;
+  }
   
-  &--slope &__mark {
+  .layout--desktop &--slope &__mark {
     background: $color--secondary;
     .mark__line {
       height: 20rem;
       top: -20rem;
+      left: 50%;
+    }
+  }
+  .layout--mobile &--slope &__img-wrapper {
+    &::before {
+      content: '';
+      display: block;
+      @include absolute(bottom 0 left -1.5rem right -1.5rem);
+      @include size(auto, 425px);
+      background: $color--secondary;
+    }
+  }
+  .layout--mobile &--slope &__mark {
+    .mark__line {
+      z-index: 3;
+      height: 290px;
+      top: -230px;
       left: 50%;
     }
   }

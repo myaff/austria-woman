@@ -1,8 +1,11 @@
 .section {
-  &--spa {
+  .layout--desktop &--spa {
     background: url('../img/spa-bg.jpg') top center no-repeat;
   }
-  &--spa &__heading {
+  .layout--mobile &--spa {
+    background: url('../img/spa-bg-m.jpg') top center no-repeat;
+  }
+  .layout--desktop &--spa &__heading {
     margin-left: -1rem;
   }
   &--spa &__slider {
@@ -16,10 +19,26 @@
       background: $color--secondary;
     }
     
-    .owl-nav {
-      width: 210px;
-      margin-left: 122px;
+    .layout--desktop & .owl-nav {
       padding-bottom: 0.5rem;
+      margin-left: 122px;
+      width: 210px;
+    }
+    .layout--mobile & .owl-nav {
+      padding: 1rem 0;
+      margin-left: 150px;
+      width: 200px;
+    }
+  }
+  .layout--mobile &__mark {
+    &-wrapper {
+      margin-top: -60px;
+      z-index: 2;
+    }
+    .mark__line {
+      height: 280px;
+      top: -300px;
+      left: 60px;
     }
   }
 }

@@ -31,6 +31,10 @@ body {
   .no-touch & {
     padding-right: $scroll-width;
   }
+  &--mobile .fullwidth {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 }
 
 .page {
