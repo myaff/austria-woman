@@ -1,0 +1,28 @@
+.section {
+  &--slope {
+    background: url('../img/slope-bg.jpg') top center no-repeat;
+  }
+  &--slope &__heading {
+    display: flex;
+  }
+  &--slope &__img {
+    &-wrapper {
+      @include absolute(top 0 right 0);
+    }
+  }
+  &--slope &__text-1 {
+    margin-right: -1rem;
+  }
+  &--slope &__text-2 {
+    margin-right: -1.5rem;
+  }
+  
+  &--slope &__mark {
+    background: $color--secondary;
+    .mark__line {
+      height: 20rem;
+      top: -20rem;
+      left: 50%;
+    }
+  }
+}

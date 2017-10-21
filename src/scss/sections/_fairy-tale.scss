@@ -1,0 +1,50 @@
+.section {
+  &--fairy-tale {
+    background: url('../img/fairy-tale-bg.jpg') top center no-repeat;
+    z-index: 1;
+  }
+  &--fairy-tale &__text {
+    margin: 0 -1rem -0.25rem;
+  }
+  &--fairy-tale &__heading {
+    display: flex;
+  }
+  &--fairy-tale &__slider {
+    
+    .owl-carousel {
+      z-index: 3;
+    }
+    
+    .owl-nav {
+      width: 390px;
+      @media #{$sm} {
+        margin: 0 20%;
+        background: $color--secondary;
+      }
+    }
+    
+    &-wrapper {
+      
+    }
+  }
+  
+  &--fairy-tale &__mark {
+    background: $color--secondary;
+    margin-left: -1rem;
+    .mark__line {
+      height: 340px;
+      top: -340px;
+      left: 173px;
+    }
+    @media #{$sm} {
+      &-wrapper {
+        margin-top: -2rem;
+        z-index: 4;
+      }
+      .mark__line {
+        height: 235px;
+        top: -250px;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.section {
+  &--shopping {
+    background: url('../img/shopping-bg.jpg') top center no-repeat;
+    @media #{$sm} {
+      background: url('../img/clubs/clubs-bg_m.jpg') bottom 580px center no-repeat;
+      background-size: contain;
+    }
+  }
+  &--shopping &__slider-1 {
+    padding-left: 120px;
+    padding-right: 140px;
+    
+    &::before {
+      content: '';
+      display: block;
+      @include size(100%, auto);
+      @include absolute(top 222px left 0 bottom 0);
+      z-index: 0;
+      background: $color--secondary;
+    }
+    
+    .owl-carousel {
+      z-index: 3;
+    }
+    .owl-nav {
+      background: transparent;
+    }
+  }
+  &--shopping &__slider-1 &__line {
+    height: 240px;
+    bottom: 0;
+    left: 357px;
+    z-index: 4;
+  }
+  &--shopping &__slider-2 {
+    padding-right: 100px;
+    
+    .owl-nav {
+      padding: 1rem 0 0;
+    }
+  }
+  &--shopping &__slider-2 &__line {
+    height: 300px;
+    bottom: 0;
+    left: 257px;
+    z-index: 3;
+  }
+  &--shopping &__mark {
+    background: $color--secondary;
+    z-index: 2;
+  }
+  &--shopping &__offset {
+    margin-left: -235px;
+  }
+  &--shopping &__text-2 {
+    width: 350px;
+    z-index: 2;
+    
+    &::before {
+      content: '';
+      display: block;
+      @include size(950px, 110%);
+      @include absolute(bottom 0 left 0);
+      background: $body-bg;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.section {
+  &--spa {
+    background: url('../img/spa-bg.jpg') top center no-repeat;
+  }
+  &--spa &__heading {
+    margin-left: -1rem;
+  }
+  &--spa &__slider {
+    padding-right: 90px;
+    
+    &::before {
+      content: '';
+      display: block;
+      @include size(auto);
+      @include absolute(bottom 0 right 0 left 122px top 140px);
+      background: $color--secondary;
+    }
+    
+    .owl-nav {
+      width: 210px;
+      margin-left: 122px;
+      padding-bottom: 0.5rem;
+    }
+  }
+}

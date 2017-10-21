@@ -1,0 +1,38 @@
+.section {
+  &--non-stop {
+    background: url('../img/non-stop-bg.jpg') bottom center no-repeat;
+    z-index: 0;
+    margin-top: -594px;
+    padding-top: 586px;
+  }
+  &--non-stop &__heading {
+    .tp-heading--large {
+      margin-top: 0.8rem;
+    }
+  }
+  &--non-stop &__slider {
+    width: 860px;
+    
+    .owl-nav {
+      padding-bottom: 0.5rem;
+      background: $color--base;
+      margin-right: 210px;
+      width: 260px;
+    }
+  }
+  &--non-stop &__text {
+    margin: -4rem 0.5rem 0 -1rem;
+  }
+  &--non-stop &__mark {
+    margin-top: 122px;
+    &-wrapper {
+      clear: both;
+    }
+    .mark__line {
+      height: 275px;
+      top: -300px;
+      left: 257px;
+      z-index: 2;
+    }
+  }
+}
